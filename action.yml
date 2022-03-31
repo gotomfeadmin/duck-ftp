@@ -23,4 +23,16 @@ inputs:
   existing: # action to be taken when existing file found
     description: 'existing file what to do'
     required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.protocol }}
+    - ${{ inputs.host }}
+    - ${{ inputs.username }}
+    - ${{ inputs.password }}
+    - ${{ inputs.src }}
+    - ${{ inputs.target }}
+    - ${{ inputs.existing }}
+
     
