@@ -1,0 +1,26 @@
+name: 'duck-ftp'
+description: 'Copy all content to ftp with duck'
+inputs:
+  protocol: # ftp | ftps
+    description: 'protocol to use'
+    required: false
+    default: 'ftp'
+  host: # host
+    description: 'hos'
+    required: true
+  username:
+    description: 'username'
+    required: true
+  password:
+    description: 'password'
+    required: true
+  src: # src folder
+    description: 'Src folder'
+    required: true
+  target: # target folder
+    description: 'target ftp folder afer home'
+    required: true
+  existing: # action to be taken when existing file found
+    description: 'existing file what to do'
+    required: true
+    
